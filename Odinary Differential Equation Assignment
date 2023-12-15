@@ -1,0 +1,222 @@
+
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{nicefrac} % For \nicefrac
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+
+\title{2652227 Assignment 2}
+\author{Makomane Tau}
+\date{25 October 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Question 1}
+The characteristic equation for the given differential equation is:
+\[
+r^2 - 4r + 8 = 0
+\]
+
+The roots of this quadratic equation, we use the quadratic formula:
+
+\[
+r = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+\[
+r = \frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 1 \cdot 8}}{2 \cdot 1}
+\]
+
+Simplifying further:
+
+\[
+r = \frac{4 \pm \sqrt{16 - 32}}{2}
+\]
+
+\[
+r = \frac{4 \pm \sqrt{-16}}{2}
+\]
+
+\[
+r_1 = 2 + 2i \hspace{1cm}; \hspace{1cm} r_2 = 2 - 2i
+\]
+
+The complementary solution for the differential equation is then given by:
+
+\[
+y_c(x) = e^{2x}(A\cos(2x) + B\sin(2x)) \hspace{1cm}; \hspace{1cm} y_c(x) = Ae^{2x}\cos(2x) + Be^{2x}\sin(2x)
+\]
+\\
+Ansatz of Particular equation :
+\[
+y(x) = (Cx^{2} + Dx + E)e^{2x}\cos(2x)x + (Fx^{2} + Gx + I)e^{2x}\sin(2x)x
+\]
+%\[
+%y'(x) = ((2D - 2A)x^{3} + (2E + 3D - 2B)x^{2} + (2F + 2E - 2C)x + F)e^{2x}\sin{2x} + ((2E + 2A)x^{3} +  (2E + 2B + 3A)x^{2} +(2F + 2C + 2B)x + C)e^{2x\cos{2x}}
+%\]https://www.overleaf.com/project/65384ed652e6931da0cc835d
+
+
+\begin{align*}
+y'(x) = & \left( (2F + 2C)x^3 + (2G + 2D + 3C)x^2 + (2I + 2E + 2D)x + E \right) e^{2x}\cos(2x) \\
+& + \left( (2F - 2C)x^3 + (2G + 3F - 2D)x^2 + (2I + 2G - 2E)x + F \right) e^{2x}\sin(2x)
+\end{align*}
+
+\newpage
+
+\begin{align*}
+y''(x) = &  (8Fx^{3} + (8G + 12F + 12C)x^{2} + (8I + 8G + 8D + 6C)x + 4I + 4E + 2D )e^{2x}\cos(2x)
+\\
+& + (-8Cx^{3} + (12F - 8D - 12C)x^{2} + (8G + 6F - 8E - 8D)x + 4I + 2G - 4E)e^{2x}\sin(2x)
+\end{align*}
+
+
+substitute $ y(x), y'(x),y''(X) \text{ into } 
+\\
+\\
+y'' - 4y' + y = (2x^{2} - 3x)e^{2x}\cos{2x} + (10x^{2} - x - 1)e^{2x}\sin{2x} $
+
+\begin{align*}
+y''(x) = &  (8Fx^{3} + (8G + 12F + 12C)x^{2} + (8I + 8G + 8D + 6C)x + 4I + 4E + 2D )e^{2x}\cos(2x)
+\\
+& + (-8Cx^{3} + (12F - 8D - 12C)x^{2} + (8G + 6F - 8E - 8D)x + 4I + 2G - 4E)e^{2x}\sin(2x)
+\end{align*}
+
+\begin{align*}
+-4y'(x) = &  \left( (-8F - 8C)x^3 + (-8G - 8D - 12C)x^2 + (-8I - 8E - 8D)x - 4E \right) e^{2x}\cos(2x)\\
+ &+ \left( (-8F + 8C)x^3 + (-8G - 12F + 8D)x^2 + (-8I - 8G + 8E)x - 4I \right) e^{2x}\sin(2x)
+\end{align*}
+
+\[
+8y(x) = (8Cx^{3} + 8Dx^2 + 8Ex)e^{2x}\cos(2x) + (8Fx^{3} + 8Gx^2 + 8Ix)e^{2x}\sin(2x)
+\]
+\[ y'' - 4y' + y = \]
+
+\begin{align}
+e^{2x}\sin(2x) & ((-8C -8F + 8C + 8F)x^3 + (12F - 8D -12C -8G -12F +8D + 8G)x^2 \nonumber \\
+& + (8G +6F -8E -8D -8I -8G +8E + 8I)x + 4I + 2G - 4E - 4I) = (10x^{2} - x - 1)e^{2x}\sin{2x} \\
+e^{2x}\cos(2x) & ((8F - 8F -8C + 8C)x^3 + (8G + 12F + 12C -8G -8D -12C + 8D)x^2 \nonumber \\
+& + (8I + 8G + 8D + 6C - 8I - 8E - 8D + 8E)x + 4I + 4E +2D -4E) = (2x^{2} - 3x)e^{2x}\cos{2x}
+\end{align}
+
+\[
+e^{2x}\sin(2x) : -12Cx^2 + (6F - 8D)x + 2G - 4E = 10x^2 - x - 1
+\]
+\[
+C = \frac{-5}{6} ; 6F - 8D = -1;  2G - 4E = -1
+\]
+\[
+e^{2x}\cos(2x) : 12Fx^2 + (8G + 6C)x + 4I + 2D = 2x^2 - 3x
+\]
+\[
+ 12F = 2 \text{ ; }  F = \frac{1}{6}   
+\text{ ; }
+ 6F - 8D = -1 \text{ ; } D = \frac{2}{8} = \frac{1}{4}
+\]
+\\
+$ 8G + 6C = -1$ ; $8G + 6(\frac{-5}{6}) = -3$ ; $G = \frac{1}{4}$
+\\
+\\
+so $2G - 4E = -1 $ ; $ 2(\frac{1}{4}) - 4E = -1$ ; $E = \frac{3}{8}$
+\\
+\\
+AND $4I + 2D = 0$ ; $4I + 2(\frac{1}{4}) = 0$ ; $I = -\frac{1}{8}$
+\\
+so \\
+\[
+y_p(x) = (-\frac{5}{6}x^2 + \frac{1}{4}x + \frac{3}{8})e^{2x}\cos{2x} + (\frac{1}{6}x^2 + \frac{1}{4}x + \frac{1}{8})e^{2x}\sin{2x}
+\]
+\\
+\underline{\texttt{
+\[
+y(x) = Ae^{2x}\cos(2x) + Be^{2x}\sin(2x) + (-\frac{5}{6}x^2 + \frac{1}{4}x + \frac{3}{8})e^{2x}\cos{2x} + (\frac{1}{6}x^2 + \frac{1}{4}x + \frac{1}{8})e^{2x}\sin{2x}
+\]
+}}
+ 
+
+% y''-4y' + 8y = (2(x^2) - 3x)e^2x cos(2x) + (10(x^2) -x- 1)e^2x sin(2x) copy this
+
+
+\newpage
+\section{Question 2}
+
+1. a) The temperature of the food is increasing at a rate which is proportional to the current heat of the food at a give time t.
+\\ \\
+b) T(0) = \SI{20}{\degreeCelsius}
+\\
+Temperature of microwave = Ambient temperature = \(T_m\) = ?
+\\
+\(t_0\) = 0
+\\
+k = rate of heat transfer
+\\ \\ 
+c) Assume that nothing else is affecting the temperature of the food.
+\\ \\
+d) Let T be the temperature of the food at some point in time t such that T = T(t)
+\\ \\
+e) $ \frac{dT}{dt} $  = -k(T - \(T_m\))
+\\ \\ 
+\indent $if k > 0 \text{ ; } (T - T_m) < 0$
+\\
+\indent Thus :
+
+\indent $ \frac{dT}{dt}$ = k(\(T_m\) -  T)
+\\ 
+\indent $k > 0 \text{ so } T_m > T$
+\\
+\\
+2. $ \frac{dT}{dt}$ = k(\(T_m\) -  T)
+\begin{align*}
+\int \frac{dT}{dt} &= \int k(T_m - T) \\
+\end{align*}
+
+
+-\( \ln(T_m\ - T)\) = kt + c
+\\
+\[ T(t) = T_m \cdot A \cdot e^{-kt} \]
+\indent T(0) = \SI{20}{\degreeCelsius}
+\\
+\indent 20 = \(T_m\) - A ; \(T_m\) = 20 + A
+\\
+\[T(t) = 20 + A - A \cdot e^{-kt}\]
+\\
+3. T(\(30_s\)) = \SI{42}{\degreeCelsius} ; T(\(60_s\)) = \SI{62}{\degreeCelsius}
+\\
+\[ 42 = 20 + A\cdot (1 - A \cdot e^{-30k}) \hspace{1cm} (1) \]  \[ 62 = 20 + A\cdot (1 - A \cdot e^{-60k})\hspace{1cm} (2) \] 
+\\
+\indent (2) :  A = $\frac{42}{(1 - e^{-30K})}$ \hspace{3cm} (1) : 22 = $ A\cdot(1 - e^{-60k}) $
+//
+\indent substitute (2) into (1)
+\[ 22 = \frac{42 \cdot (1 -  e^{-30k})}{(1 - e^{-60k})}\]
+
+$42e^{-30k} - 22e^{-60k} = 20 \hspace{1cm} \text{let u} = e^{k}$
+\\
+\[ 42u^{-30} - 22u^{-60} = 20 \] 
+
+\[u_1 = \sqrt{\sqrt[15]{\frac{11}{10}}} , u_2 = -\sqrt{\sqrt[15]{\frac{11}{10}}} , u_3 = 1, u_4 = -1 \]
+
+\indent $e^{k} = \sqrt{\sqrt[15]{\frac{11}{10}}} : k = \frac{\ln{\frac{11}{10}}}{30}$
+\\
+\indent $e^{k} = -\sqrt{\sqrt[15]{\frac{11}{10}}} : \text{No solution for k} \in \circledE \mathbb{R}$
+\\
+\indent $e^{k} = 1 : k = 0$
+\\
+\indent $e^{k} = -1 : \text{No solution for k} \in \circledE \mathbb{R}$
+\\ \\
+So : \\
+\[k = \frac{\ln{\frac{11}{10}}}{30} \text{ or } k = 0 \]
+substitute K for A :
+\[A = \frac{42}{(1-e^{-60 \cdot (\frac{{\ln{\frac{11}{10}}}}{30})})}; \hspace{2cm} \text{A = 242} \]
+\[T(t) = 20 + 242 - (242) \cdot e^{-kt}\]
+so : 
+\[T(t) = 262 - 242e^{-kt}\]
+\[T_m = \text{Temperature of oven} = \SI{262}{\degreeCelsius}\]
+
+
+
+
+\end{document}
